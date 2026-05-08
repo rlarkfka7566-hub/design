@@ -5,9 +5,8 @@
 body {
   margin: 0;
   font-family: "Noto Sans KR", sans-serif;
-  /* font-family: Arial, Helvetica, sans-serif; */
   color: #000;
-  background: #fff;
+  background: #ffffff;
   font-size: 13px;
 }
 
@@ -30,11 +29,10 @@ img {
   align-items: flex-start;
 }
 
-.logo {
-  font-size: 34px;
-  font-weight: 900;
-  letter-spacing: -2px;
-  line-height: 1;
+.logo img {
+  width: 88px;
+  height: auto;
+  display: block;
 }
 
 nav {
@@ -58,74 +56,116 @@ main {
 .intro {
   margin-top: 185px;
   margin-bottom: 110px;
-  max-width: 940px;
+  max-width: 1100px;
 }
 
-.intro p {
+.intro-title {
   margin: 0;
-  font-size: 39px;
-  line-height: 1.13;
-  letter-spacing: -1.8px;
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+.intro-title strong {
+  display: inline-block;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.07em;
+  margin-right: 10px;
+}
+
+.intro-sub {
+  margin: 36px 0 0;
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.055em;
+  max-width: 1100px;
 }
 
 .exhibition {
-  margin-bottom: 48px;
-  /* border-bottom: 1px solid #000; */
+  margin-bottom: 72px;
   padding-bottom: 24px;
 }
 
-.exhibition h2 {
-  margin: 0 0 20px;
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-head h2 {
+  margin: 0;
   font-size: 15px;
   font-weight: 800;
 }
 
-.exhibition h2.light {
-  color: #000000;
+.section-head a {
+  font-size: 12px;
 }
 
-.grid.two {
+.project-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0,360px));
   gap: 28px;
 }
 
-.grid.two img {
-  height: 455px;
+.project-card img {
+  width: 360px;
+  aspect-ratio: 4/5;
+  object-fit: cover;
 }
 
-.wide-img {
-  height: 675px;
-  margin-bottom: 24px;
-}
-
-.bordered {
-  /* border-top: 1px solid #000; */
-  padding-top: 24px;
-}
-
-.info-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-top: 18px;
-  padding: 0 28px;
+.project-info {
+  margin-top: 14px;
+  padding-left: 28px;
   font-size: 12px;
+  line-height: 1.4;
 }
 
-.info-row p {
-  margin: 0 0 5px;
+.project-info p {
+  margin: 0;
 }
 
-.info-row a {
-  font-size: 12px;
+.project-title {
+  font-weight: 500;
+}
+
+.project-date {
+  margin-top: 4px !important;
+  color: #000;
+}
+
+.ui-section {
+  margin-top: 96px;
+  padding: 52px 0 60px;
+  background: #e8e8e8;
+  margin-left: -25px;
+  margin-right: -25px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.ui-card {
+  width: 1000px ;
+  max-width: 100%;
+  /* padding: 18px;
+  background: #fff;
+  border: 1px solid #e5e5e5; */
+}
+
+.ui-card img {
+  height: auto;
+  object-fit: contain;
 }
 
 .about {
   margin-top: 40px;
   padding-bottom: 65px;
   padding-top: 36px;
-  /* border-top: 1px solid  #d2d2d2; */
 }
 
 .about button {
@@ -194,22 +234,44 @@ footer {
     margin-bottom: 70px;
   }
 
-  .intro p {
+  .intro-title {
+    font-size: 24px;
+  }
+
+  .intro-title strong {
+    font-size: 52px;
+  }
+
+  .intro-sub {
     font-size: 30px;
   }
 
-  .grid.two,
+  .project-grid,
   .about-grid {
     grid-template-columns: 1fr;
   }
 
-  .grid.two img,
-  .wide-img,
+  .project-card img,
   .about-grid img {
     height: auto;
   }
 
-  .info-row {
-    padding: 0;
+  .project-info {
+    padding-left: 0;
+  }
+
+  .section-head {
+    align-items: flex-start;
+  }
+
+  .ui-section {
+    margin-top: 70px;
+    padding-top: 40px;
+    padding-bottom: 44px;
+  }
+
+  .ui-card {
+    width: 100%;
+    padding: 12px;
   }
 }
